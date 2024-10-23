@@ -1,1 +1,45 @@
-I have nothing done yet.
+Incident Response Plan
+1. Detection Method:
+Method: Network Intrusion Detection System (NIDS)
+Explanation: An NIDS monitors network traffic for suspicious patterns or unauthorized access attempts. It uses predefined rules or machine learning algorithms to detect potential security incidents like malware activity or unauthorized access.
+2. Containment Strategy:
+Strategy: Network Segmentation
+Explanation: If a security incident is detected, the affected systems are isolated from the rest of the network to prevent the spread of the attack. For instance, if a malware attack is detected, the compromised server is placed in a separate VLAN to protect critical resources.
+3. Eradication and Recovery Steps:
+Steps:
+Eradication: Remove all malicious files and software using antivirus tools. Conduct thorough scans to ensure all remnants of the attack are eradicated.
+Recovery: Restore affected systems from the last known good backup. Verify system integrity and functionality before reconnecting to the network.
+4. Type of Cyber Attack:
+Attack Type: Ransomware
+Explanation: Ransomware encrypts files on a victim’s system and demands a ransom in exchange for the decryption key. It disrupts access to critical data and services, potentially causing significant financial and operational damage.
+
+Security Policy Document
+1. Key Security Rules/Guidelines:
+Access Control Policy: Implement role-based access control (RBAC) to restrict access to sensitive data based on job roles.
+Network Security Policy: Enforce network segmentation and regular monitoring to protect internal systems from unauthorized access.
+Data Encryption Policy: Mandate the use of AES-256 encryption for all sensitive data stored on and transmitted between systems.
+2. Incident Response Plan:
+Follow the same steps outlined in the Incident Response Plan above for detecting, containing, eradicating, and recovering from security incidents.
+3. Maintaining the CIA Triad (Confidentiality, Integrity, Availability):
+Confidentiality: Access control policies ensure that only authorized personnel have access to sensitive information.
+Integrity: Regular integrity checks and encryption policies maintain data accuracy and protect against unauthorized changes.
+Availability: Network segmentation and backups ensure continued access to resources and fast recovery in case of incidents.
+
+Apply Encryption Techniques
+1. Encryption and Decryption Example:
+Plain Text: "Security123!"
+Encryption Method: AES-256
+Encrypted Text: "dXk32hG1y7V8L9OPf4ErJ5s="
+Decrypted Plain Text: "Security123!"
+2. Hashing Example:
+Plain Text: "Security123!"
+Hashed with SHA-256: "e8b04f92376aebf4c71a5b172d1b169b154d62d125a95fba690d20d2b1a5147e"
+
+Legal and Ethical Compliance
+1. Relevant Laws and Regulations:
+General Data Protection Regulation (GDPR): Establishes requirements for data protection and privacy in the EU.
+Health Insurance Portability and Accountability Act (HIPAA): Regulates the protection of health-related information in the US.
+2. Ethical Consideration:
+Ethical Consideration: Ensure transparency and accountability in incident handling. Employees and stakeholders should be informed promptly of security breaches impacting their data.
+3. Compliance Explanation:
+The incident response plan upholds legal requirements by aligning with regulations like GDPR and HIPAA for timely breach reporting and data protection. Ethical principles are maintained through transparency and prioritizing stakeholder interests.
