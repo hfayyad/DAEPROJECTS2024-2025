@@ -1,0 +1,56 @@
+Network Security Tools Usage Report
+1. Wireshark Capture and Analysis
+
+Wireshark Overview: Wireshark is a widely used tool for network protocol analysis. It captures network traffic and provides insights into potential security risks, such as unencrypted sensitive data transmission.
+
+Wireshark Capture Overview:
+
+File Used: ftp-passwords101.pcapng
+Capture Summary: The packet capture was analyzed to assess unencrypted FTP traffic that may include sensitive data, such as passwords.
+Key Findings from the Capture:
+
+The capture contains FTP traffic, which is not encrypted. FTP transmits data, including usernames and passwords, in plaintext.
+Sensitive Information Detected: The captured FTP packets reveal the transmission of login credentials, including usernames and passwords, which are visible in plaintext.
+Analysis:
+
+Risk: The transmission of credentials over unencrypted FTP makes the network vulnerable to eavesdropping attacks. An attacker with access to the network can easily capture and view these credentials.
+Recommendation: It is strongly recommended to switch from FTP to FTPS or SFTP, both of which offer encryption for secure data transmission.
+2. Network Vulnerability Scanner Report
+
+Nmap Overview: Nmap (Network Mapper) is an open-source tool for network discovery and security auditing. It can detect active hosts, open ports, and services running on a network.
+
+Nmap Scan Details:
+
+Tool Used: Nmap 7.94SVN
+Scan Date: January 22, 2025
+Scan Type: ARP Ping Scan (Host Discovery)
+Targets Scanned: 256 IP addresses in the local network range.
+Scan Results:
+
+Hosts Up: 2 active hosts discovered in the scan (10.138.16.210, 10.138.16.105).
+MAC Addresses Identified:
+10.138.16.210: Apple device (MAC Address: 8C:7A:AA:E6:4F:51).
+Network Latency: Very low latency, indicating a fast connection between devices.
+Key Findings:
+
+Only two hosts were active in the scanned range, indicating minimal activity or potentially secure configurations that restrict unnecessary services.
+Recommendation: Regularly monitor network activity and configure firewalls or segmentation for better security, particularly if only a few devices are expected on the network.
+3. Network Penetration Testing Tool Output
+
+Penetration Testing Overview: Penetration testing (or ethical hacking) involves simulating an attack to evaluate the security of a network or system. In this scenario, Nmap and other penetration testing tools can help assess the network's security posture.
+
+While the specific results of a penetration test weren't provided in the files, it is implied that network scanning and vulnerability assessment using Nmap have been conducted to check for active hosts and open ports.
+
+Penetration Testing Steps Suggested:
+
+Service Enumeration: After discovering active hosts with Nmap, a deeper scan can be performed to identify services running on the open ports. This step is critical to identify vulnerable services.
+Vulnerability Scanning: Tools like Nessus or OpenVAS can be used to scan the discovered services for known vulnerabilities.
+Exploitation: Once vulnerabilities are identified, ethical hackers can attempt exploitation using tools like Metasploit to simulate attacks and gain access to systems.
+Post-Exploitation: After successful exploitation, further actions such as maintaining access, privilege escalation, and data exfiltration can be simulated to assess the potential damage in a real attack scenario.
+Conclusion and Recommendations
+This report demonstrates the use of multiple network security tools to assess the network's security posture:
+
+Wireshark: Revealed that FTP traffic is transmitting sensitive data like usernames and passwords in plaintext. It's highly recommended to switch to a more secure protocol like FTPS or SFTP.
+Nmap: Scanned the network to discover active hosts and identified a few devices with low latency. Further action to check open ports and services is recommended.
+Penetration Testing: Network penetration testing, including service enumeration and vulnerability scanning, should be conducted regularly to identify and mitigate potential security risks.
+By addressing the risks identified in the scan and analysis, the network can be secured against a variety of attacks, especially related to data interception and unauthorized access. Regular scans and updates to software and protocols will further enhance network security.

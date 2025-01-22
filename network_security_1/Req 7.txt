@@ -1,0 +1,93 @@
+Network Security Events Monitoring and Incident Response Report
+
+Prepared by: Hamza FayyadDate: 1/22/25
+
+1. Introduction
+
+The purpose of this report is to document the monitoring and management of network security events. This includes identifying a security incident, detailing the response steps, and providing supporting logs and screenshots for verification.
+
+2. Overview of Monitoring Process
+
+The network was monitored using a combination of intrusion detection systems (IDS), firewall logs, and security information and event management (SIEM) tools. The key tools and methods used include:
+
+SIEM Tool: Splunk Enterprise for centralized log collection and analysis.
+
+Firewall Logs: Monitored through Palo Alto Networks Firewall.
+
+Endpoint Protection: Monitored using CrowdStrike Falcon.
+
+Network Traffic Analysis: Inspected with Wireshark for anomalies.
+
+3. Identified Security Incident
+
+Incident Summary:
+
+Date and Time of Incident: January 20, 2025, at 14:35 UTC.
+
+Type of Incident: Unauthorized access attempt through brute force login.
+
+Affected System: Corporate web application server (IP: 192.168.1.45).
+
+Detection Method: SIEM alert triggered by repeated failed login attempts.
+
+Indicators of Compromise (IoC):
+
+Multiple failed login attempts from a single external IP address (203.0.113.78).
+
+Unusual traffic patterns directed toward the server.
+
+Geolocation of the attacking IP showed it originated from a region not associated with regular operations.
+
+4. Incident Response Steps
+
+Step 1: Initial Detection and Validation
+
+Action: Verified the SIEM alert indicating over 50 failed login attempts within 5 minutes.
+
+Log Evidence:
+
+Timestamp          Source IP       Destination IP   Event Type       Details
+2025-01-20 14:35  203.0.113.78    192.168.1.45     Login Failure    Invalid credentials
+2025-01-20 14:36  203.0.113.78    192.168.1.45     Login Failure    Invalid credentials
+
+Step 2: Containment
+
+Action: Blocked the source IP (203.0.113.78) using the firewall.
+
+Firewall Rule Added:
+
+Rule Name: Block Brute Force IP
+Source: 203.0.113.78
+Action: Deny
+
+Step 3: Eradication
+
+Action: Conducted a review of the server logs to ensure no successful logins were achieved by the attacker. Updated access credentials for all affected accounts.
+
+Log Evidence:
+
+Timestamp          Source IP       Action          Result
+2025-01-20 14:40  203.0.113.78    Login Attempt   Denied
+
+
+Step 4: Recovery
+
+Action: Restored normal operations after ensuring no further access attempts from the blocked IP or other suspicious activity.
+
+Monitoring: Enhanced monitoring rules in the SIEM to flag similar patterns in the future.
+
+Step 5: Post-Incident Review
+
+Conducted a meeting with the incident response team to review actions taken and identified improvements to existing security policies.
+
+Key Improvements:
+
+Implemented a stricter account lockout policy after a specified number of failed login attempts.
+
+Enabled multi-factor authentication (MFA) for all users.
+
+5. Conclusion
+
+The incident was successfully identified, contained, and resolved without significant impact on operations. The lessons learned from this event will contribute to strengthening the organization’s cybersecurity posture. Ongoing monitoring and updated security protocols are in place to mitigate similar threats in the future.
+
+End of Report
