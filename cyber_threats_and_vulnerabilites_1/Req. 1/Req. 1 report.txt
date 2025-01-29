@@ -1,0 +1,85 @@
+1. Introduction
+
+This report outlines the practical steps undertaken in analyzing malware, creating phishing templates, and mapping an Advanced Persistent Threat (APT) campaign. The objective was to explore various attack vectors, analyze their impact, and document the process for further security assessments.
+
+2. Tools Used
+
+The following tools were utilized in the execution of this project:
+
+SET (Social Engineering Toolkit) for phishing attacks
+
+Metasploit Framework for browser exploitation
+
+Python scripts for data analysis
+
+Wireshark for network traffic monitoring
+
+Kali Linux/Parrot OS as the operating environment
+
+3. Step-by-Step Execution
+
+3.1 Phishing Attack Setup
+
+Selected the Website Attack Vectors module in SET.
+
+Chose the Credential Harvester Attack Method to collect login credentials.
+
+Used Web Templates to clone a login page (Google login template selected).
+
+Modified HARVESTER_REDIRECT and HARVESTER_URL for redirection post-login.
+
+Executed the attack and monitored input fields for credential capture.
+
+Observed credential submission and stored the results for analysis.
+
+3.2 Data Capture and Exploitation
+
+Launched the credential harvester server to capture login attempts.
+
+Monitored incoming requests and extracted potential credentials.
+
+Analyzed captured data using Python scripts.
+
+Identified key indicators of compromise (IOC) from harvested data.
+
+3.3 APT Campaign Mapping
+
+Used OSINT tools to analyze potential targets and their vulnerabilities.
+
+Identified attack vectors that could be used for targeted phishing campaigns.
+
+Executed a controlled phishing simulation to evaluate effectiveness.
+
+Analyzed results and mapped out the tactics, techniques, and procedures (TTPs) used in real-world scenarios.
+
+4. Findings and Analysis
+
+Successfully cloned a legitimate login page to deceive users.
+
+Captured email and password entries from unsuspecting test users.
+
+Identified weaknesses in user awareness regarding phishing attempts.
+
+Observed real-time credential submission and analyzed the redirection logs.
+
+Successfully mapped an APT campaign with key indicators and attack vectors.
+
+5. Conclusion and Recommendations
+
+User Awareness Training: Educating users about phishing techniques and social engineering risks.
+
+Multi-Factor Authentication (MFA): Enforcing MFA to prevent unauthorized access even if credentials are stolen.
+
+Email Filtering and Monitoring: Implementing robust email filtering solutions to detect and block phishing attempts.
+
+Regular Security Audits: Conducting periodic penetration testing and phishing simulations.
+
+6. References
+
+SET Documentation
+
+Metasploit Framework User Guide
+
+OWASP Phishing Best Practices
+
+OSINT Techniques for Threat Intelligence
